@@ -16,5 +16,16 @@ const images = [
 const galleryStyleRef = document.querySelector('ul.gallery');
 galleryStyleRef.classList.add('gallery-style');
 
-const pictureRef = document.createElement('li');
-pictureRef.insertAdjacentHTML('beforeend', `<img src="${item.url}" alt="${item.alt}">`);
+const listOfGallery = (pictures) => {
+  const picturesGallery = pictures.map(({ url, alt }) => {
+    const pictureRef = document.createElement('li');
+    pictureRef.insertAdjacentHTML('beforeend', `<img src="${url}" alt="${alt}">`);
+    pictureRef.setAttribute('class', 'gallery-pictures');
+    return pictureRef;
+  });
+  return galleryStyleRef.append(...picturesGallery);
+}
+
+console.log(listOfGallery(images));
+
+
