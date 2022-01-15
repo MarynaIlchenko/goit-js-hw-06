@@ -10,6 +10,7 @@ function onButtonClick(event) {
   spanRef.textContent = getRandomHexColor();
   if (!event.target.classList.contains('change-color')) { //если у элемента нет класса change-color.
     return; // закончить работу(выход из метода)
+  } else {
+    return (document.body.style.background = getRandomHexColor()); //меняет цвет
   }
-  return (document.body.style.background = getRandomHexColor()); //меняет цвет
 }
