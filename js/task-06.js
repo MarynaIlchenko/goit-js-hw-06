@@ -9,11 +9,10 @@
 //     this.classList.add('valid');
 //   }
 // };
-
 // inputRef.addEventListener('blur', borderColor);
 
 const inputRef = document.querySelector('#validation-input');
-const noBlur = (event) =>{
+const noBlur = (event) => {
   if (event.currentTarget.value.length === Number(inputRef.dataset.length)){
   inputRef.classList.add('valid');
   inputRef.classList.remove('invalid');
