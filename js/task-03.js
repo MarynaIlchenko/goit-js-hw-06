@@ -18,7 +18,7 @@ galleryStyleRef.classList.add('gallery-style');
 
 const listOfGallery = (pictures) => {
   const picturesGallery = pictures.map(({ url, alt }) => {
-    const pictureRef = document.createElement('li');
+    // const pictureRef = document.createElement('li');
     pictureRef.insertAdjacentHTML('beforeend', `<img src="${url}" alt="${alt}">`);
     pictureRef.setAttribute('class', 'gallery-pictures');
     return pictureRef;
@@ -28,4 +28,14 @@ const listOfGallery = (pictures) => {
 
 console.log(listOfGallery(images));
 
+
+// galleryStyleRef.classList.add('gallery-style');
+
+// const listImage = images.reduce((acc, { url, alt }) => { 
+
+//   acc += `<li class="gallery_item"><img src='${url}', alt='${alt}'></li>`;
+//   return acc;
+// },'');
+
+// galleryStyleRef.insertAdjacentHTML('beforeend', listImage)
 
