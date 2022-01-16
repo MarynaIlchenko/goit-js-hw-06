@@ -28,11 +28,11 @@ button {
   justify-content: center;
   list-style: none;
   align-items: baseline;
+  margin-left: 15px;
 }
-
+/* 
 .gallery-pictures img {
 max-width: 350px;
 height: auto;
-margin-left: 15px;
-}
+} */
 

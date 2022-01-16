@@ -42,7 +42,7 @@ console.log(listOfGallery(images));
 // ----------------Решение через reduce ----------------------------
 // const listGallery = document.querySelector('ul.gallery');
 // const listImage = images.reduce((acc, { url, alt }) => {
-//   acc += `<li class="gallery_item"><img src='${url}', alt='${alt}' width = 300, height = 200></li>`;
+//   acc += `<li class="gallery-style"><img src='${url}', alt='${alt}' width = 300, height = 200></li>`;
 //   return acc;
 // },'');
 // listGallery.insertAdjacentHTML('beforeend', listImage)
