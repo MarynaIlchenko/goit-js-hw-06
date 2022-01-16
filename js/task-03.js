@@ -12,30 +12,41 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
+// ----------------------------Внесенные правки-----------------------------
 const galleryStyleRef = document.querySelector('ul.gallery');
 galleryStyleRef.classList.add('gallery-style');
 
 const listOfGallery = (pictures) => {
   const picturesGallery = pictures.map(({ url, alt }) => {
-    // const pictureRef = document.createElement('li');
-    pictureRef.insertAdjacentHTML('beforeend', `<img src="${url}" alt="${alt}">`);
-    pictureRef.setAttribute('class', 'gallery-pictures');
-    return pictureRef;
+    galleryStyleRef.insertAdjacentHTML('beforeend', `<li><img src="${url}", alt="${alt}" width = 300, height = 200></li>`);
+    return pictures;
   });
-  return galleryStyleRef.append(...picturesGallery);
 }
-
 console.log(listOfGallery(images));
 
-
+// ------------------Первое решение----------------------------------------
+// const galleryStyleRef = document.querySelector('ul.gallery');
 // galleryStyleRef.classList.add('gallery-style');
 
-// const listImage = images.reduce((acc, { url, alt }) => { 
+// const listOfGallery = (pictures) => {
+//   const picturesGallery = pictures.map(({ url, alt }) => {
+//     const pictureRef = document.createElement('li');
+//     pictureRef.insertAdjacentHTML('beforeend', `<img src="${url}" alt="${alt}">`);
+//     pictureRef.setAttribute('class', 'gallery-pictures');
+//     return pictureRef;
+//   });
+//   return galleryStyleRef.append(...picturesGallery);
+// }
+// console.log(listOfGallery(images));
 
-//   acc += `<li class="gallery_item"><img src='${url}', alt='${alt}'></li>`;
+// ----------------Решение через reduce ----------------------------
+// const listGallery = document.querySelector('ul.gallery');
+// const listImage = images.reduce((acc, { url, alt }) => {
+//   acc += `<li class="gallery_item"><img src='${url}', alt='${alt}' width = 300, height = 200></li>`;
 //   return acc;
 // },'');
+// listGallery.insertAdjacentHTML('beforeend', listImage)
 
-// galleryStyleRef.insertAdjacentHTML('beforeend', listImage)
+
+
 
